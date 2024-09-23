@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <script>
+        let div1 = document.createElement('div');
+        div1.className = "background";
+
+        let h1 = document.createElement('h1');
+        h1.className = "heading";
+        h1.innerText = "Chat";
+        div1.appendChild(h1);  
+
+        document.body.appendChild(div1);
+        
+        let div2 = document.createElement('div');
+        div2.classList.add('whole');
+        div1.appendChild(div2);
+
+        let p1 = document.createElement('p');
+        p1.classList.add('text-sent');
+        p1.innerText = "Hello, how are you?";
+        div2.appendChild(p1);
+
+        let p2 = document.createElement('p');
+        p2.classList.add('text-rec');
+        p2.innerText = "Hi Varakumar, I am good. How are you?";
+        div2.appendChild(p2);
+
+        let p3 = document.createElement('p');
+        p3.classList.add('text-sent');
+        p3.innerText = "I'm fine. I am learning DOM in JavaScript";
+        div2.appendChild(p3);
+
+        let p4 = document.createElement('p');
+        p4.classList.add('text-rec');
+        p4.innerText = "DOM?";
+        div2.appendChild(p4);
+
+        let p5 = document.createElement('p');
+        p5.classList.add('text-sent');
+        p5.innerText ="Yes, by doing projects parallelly, I am learning recursion.";
+        div2.appendChild(p5);
+
+        let p6 = document.createElement('p');
+        p6.classList.add('text-rec');
+        p6.innerText = "Awesome, can you tell how you are learning?";
+        div2.appendChild(p6);
+
+        let p7 = document.createElement('p');
+        p7.classList.add('text-sent');
+        p7.innerText = "Can I call you?";
+        div2.appendChild(p7);
+
+        let back = document.querySelector('.background');
+        back.style.backgroundImage = 'url("https://img.freepik.com/premium-photo/foggy-rainy-highway-road-low-poor-visibility-accident-danger-warning_73990-1462.jpg?w=360")';
+        back.style.cssText += "background-size: cover; height: 100vh;";
+
+        let head = document.querySelector('.heading');
+        head.style.cssText += "color: #ffffff; background-color: #323f4b; font-size: 20px; text-align: center; font-family: 'Roboto'; font-weight: bold; padding: 14px;";
+
+        let whole = document.querySelector(".whole");
+        whole.style.cssText += "padding: 14px; color: #ffffff; font-family: 'Roboto'; font-size: 12px;";
+
+        let sentMessages = document.querySelectorAll('.text-sent');
+        sentMessages.forEach(sent => {
+            sent.style.cssText += "background-color: #47a3f3; padding: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; text-align: right;";
+        });
+
+        let recMessages = document.querySelectorAll('.text-rec');
+        recMessages.forEach(rec => {
+            rec.style.cssText += "background-color: #52606d; padding: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; text-align: left;";
+        });
+    </script>
+</body>
+</html>
